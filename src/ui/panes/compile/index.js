@@ -122,35 +122,45 @@ class Compile extends React.Component {
 		const files = KiCad.generate(keyboard);
 
 		// Get the PCB stencil.
-		const zip = new JSZip();
+		JSZipUtils.getBinaryContent('/files/kicad.zip', (err, data) => {
+			if (err) {
+				console.error(err);
+				state.error('Unable to retrieve files');
+				state.ui.set('compile-working', false);
+				return;
+			}
 
-		// Insert the files.
-		for (const file in files) {
-			console.log('file', file);
-			zip.file(file, files[file]);
-		}
+			JSZip.loadAsync(data).then(zip => {
+				// Insert the files.
+				for (const file in files) {
+					zip.file(file, files[file]);
+				}
 
-		// Download the file.
-		console.log('before gen');
-		zip.generateAsync({ type: 'blob' }).then(blob => {
-			console.log('inside');
-			// Generate a friendly name.
-			const friendly = keyboard.settings.name ?
-				Utils.generateFriendly(keyboard.settings.name) : 'layout';
+				// Download the file.
+				zip.generateAsync({ type: 'blob' }).then(blob => {
+					// Generate a friendly name.
+					const friendly = keyboard.settings.name ?
+						Utils.generateFriendly(keyboard.settings.name) : 'layout';
 
-			console.log('before save');
-			saveAs(blob, friendly + '.zip');
+					console.log('before save');
+					saveAs(blob, friendly + '.zip');
 
-			// Re-enable buttons.
-			state.ui.set('compile-working', false);
-		}, (err) => {
-			console.error(err);
-			state.error('Unable to generate files');
-			state.ui.set('compile-working', false);
-		}).catch(e => {
-			console.error(err);
-			state.error('Unable to generate files');
-			state.ui.set('compile-working', false);
+					// Re-enable buttons.
+					state.ui.set('compile-working', false);
+				}, (err) => {
+					console.error(err);
+					state.error('Unable to generate files');
+					state.ui.set('compile-working', false);
+				}).catch(e => {
+					console.error(err);
+					state.error('Unable to generate files');
+					state.ui.set('compile-working', false);
+				});
+			}).catch(e => {
+				console.error(err);
+				state.error('Unable to retrieve files');
+				state.ui.set('compile-working', false);
+			});
 		});
 	}
 
