@@ -114,6 +114,7 @@ class Compile extends React.Component {
 	downloadKiCad() {
 		const state = this.props.state;
 		const keyboard = state.keyboard;
+    console.log('keyboard', keyboard);
 
 		// Disable buttons.
 		state.ui.set('compile-working', true);

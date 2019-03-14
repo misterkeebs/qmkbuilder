@@ -1,4 +1,4 @@
-const C = require('const');
+const C = require('../../const');
 
 class Keycode {
 

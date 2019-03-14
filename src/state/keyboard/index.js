@@ -1,7 +1,7 @@
 const Key = require('./key');
 const Keycode = require('./keycode');
 
-const C = require('const');
+const C = require('../../const');
 
 class Keyboard {
 
