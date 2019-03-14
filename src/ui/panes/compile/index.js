@@ -1,6 +1,7 @@
 const React = require('react');
 
 const Files = require('files');
+const KiCad = require('kicad');
 const Utils = require('utils');
 
 const Request = require('superagent');
@@ -15,6 +16,7 @@ class Compile extends React.Component {
 		// Bind functions.
 		this.downloadHex = this.downloadHex.bind(this);
 		this.downloadZip = this.downloadZip.bind(this);
+		this.downloadKiCad = this.downloadKiCad.bind(this);
 	}
 
 	downloadHex() {
@@ -109,6 +111,49 @@ class Compile extends React.Component {
 		});
 	}
 
+	downloadKiCad() {
+		const state = this.props.state;
+		const keyboard = state.keyboard;
+
+		// Disable buttons.
+		state.ui.set('compile-working', true);
+
+		// Generate KiCad files.
+		const files = KiCad.generate(keyboard);
+
+		// Get the PCB stencil.
+		const zip = new JSZip();
+
+		// Insert the files.
+		for (const file in files) {
+			console.log('file', file);
+			zip.file(file, files[file]);
+		}
+
+		// Download the file.
+		console.log('before gen');
+		zip.generateAsync({ type: 'blob' }).then(blob => {
+			console.log('inside');
+			// Generate a friendly name.
+			const friendly = keyboard.settings.name ?
+				Utils.generateFriendly(keyboard.settings.name) : 'layout';
+
+			console.log('before save');
+			saveAs(blob, friendly + '.zip');
+
+			// Re-enable buttons.
+			state.ui.set('compile-working', false);
+		}, (err) => {
+			console.error(err);
+			state.error('Unable to generate files');
+			state.ui.set('compile-working', false);
+		}).catch(e => {
+			console.error(err);
+			state.error('Unable to generate files');
+			state.ui.set('compile-working', false);
+		});
+	}
+
 	render() {
 		const state = this.props.state;
 		const keyboard = state.keyboard;
@@ -122,12 +167,21 @@ class Compile extends React.Component {
 				Download .hex
 			</button>
 			<div style={{ height: '1.5rem' }}/>
-			Or download the source files.
+			Download the source files.
 			<div style={{ height: '0.5rem' }}/>
 			<button
 				className='light'
 				disabled={ !keyboard.valid || state.ui.get('compile-working', false) }
 				onClick={ this.downloadZip }>
+				Download .zip
+			</button>
+			<div style={{ height: '1.5rem' }}/>
+			Download KiCad PCB files.
+			<div style={{ height: '0.5rem' }}/>
+			<button
+				className='light'
+				disabled={ !keyboard.valid || state.ui.get('compile-working', false) }
+				onClick={ this.downloadKiCad }>
 				Download .zip
 			</button>
 		</div>;
