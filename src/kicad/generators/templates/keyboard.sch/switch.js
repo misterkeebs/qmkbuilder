@@ -1,7 +1,7 @@
 module.exports = `
 <%
-const x = (data.key.col * 1000);
-const y = (data.key.row * 1000);
+const x = 1500 + (data.key.col * 1000);
+const y = 1000 + (data.key.row * 1000);
 %>$Comp
 L keyboard_parts:KEYSW K_<%= data.name %>
 U 1 1 <%= data.id %>1
