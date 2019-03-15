@@ -12,6 +12,7 @@ const Micro = require('./templates/keyboard.kicad_pcb/Micro');
 const USB = require('./templates/keyboard.kicad_pcb/usb');
 
 const formatName = require('./name');
+const pinPadMap = require('./pin-pad-map');
 
 class PCBGenerator extends Generator {
 
@@ -55,7 +56,7 @@ class PCBGenerator extends Generator {
     modules.push(new Plane(keyboard, 'GND', 'F.Cu').render(gap + 1));
     modules.push(new Plane(keyboard, 'VCC', 'B.Cu').render(gap + 1));
 
-    const limitx = (keyboard.bounds.max.x * 1905) / 100;
+    const limitx = (keyboard.bounds.max.x * 1905) / 100 + 5;
 
     const xCap1 = new Cap(nets);
     const xc1x = limitx + 5;
@@ -128,15 +129,16 @@ class PCBGenerator extends Generator {
     //   [41, 40, 39, 38, 37, 8, 9, 10, 11, 28, 29, 30, 12, 31, 32],  // columns
     // ];
 
-    // [...Array(keyboard.rows)].forEach((_, r) => {
-    //   const pad = padMatrixOrder[0].pop();
-    //   micro.setPad(pad, `/row${r}`);
-    // });
+    [...Array(keyboard.rows)].forEach((_, r) => {
+      const pad = pinPadMap[keyboard.pins.row[r]];
+      micro.setPad(pad, `/row${r}`);
+    });
 
-    // [...Array(keyboard.cols)].forEach((_, c) => {
-    //   const pad = padMatrixOrder[1].pop();
-    //   micro.setPad(pad, `/col${c}`);
-    // });
+    [...Array(keyboard.cols)].forEach((_, c) => {
+      const pad = pinPadMap[keyboard.pins.col[c]];
+      micro.setPad(pad, `/col${c}`);
+    });
+
 
     modules.push(r1.render(r1x, r1y));
     modules.push(reset.render(rx, ry));
