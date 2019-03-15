@@ -1,7 +1,6 @@
 const ejs = require('ejs');
 const Generator = require('../../files/generators/index');
 const formatName = require('./name');
-const randomHex = require('./templates/randomhex');
 
 class SchematicsGenerator extends Generator {
 
@@ -15,7 +14,7 @@ class SchematicsGenerator extends Generator {
     const rowLabelTpl = require('./templates/keyboard.sch/row-label');
     const colLabelTpl = require('./templates/keyboard.sch/col-label');
     const wiringTpl = require('./templates/keyboard.sch/wiring');
-		const prefix = randomHex(2);
+		const nameSet = new Set();
 
 		const result = [];
     const lastColY = [...Array(keyboard.cols)].fill(0);
@@ -37,8 +36,15 @@ class SchematicsGenerator extends Generator {
         const y = 1000 + (row * 1000);
 				if (keys) {
 					keys.forEach(key => {
-						const name = formatName(key.legend);
-						const id = `${prefix}${randomHex(5)}`;
+						let name = formatName(key.legend);
+            while (nameSet.has(name)) {
+              const num = name.replace(/^\D+/g, '');
+              const prefix = name.replace(/\d+$/g, '');
+              const i = num ? parseInt(num, 10) + 1 : 1;
+              name = `${prefix}${i}`;
+            }
+            nameSet.add(name);
+						const id = `${key.id.toString(16)}`;
 						const data = { key, name, id, x, y };
 						const theSwitch = ejs.render(switchTpl, { data, keyboard });
 						result.push(theSwitch);
