@@ -35,8 +35,8 @@ class PCBGenerator extends Generator {
             const theSwitch = new Switch(k, nets, this.leds);
             const diode     = new Diode(k, nets);
             theSwitch.connectPads(2, diode, 2);
-            modules.push(theSwitch.render(k.x, k.y, k.rotation));
-            modules.push(diode.render(k.x - 0.5, k.y, 90));
+            modules.push(theSwitch.render(k.pos.x, k.pos.y, k.rotation));
+            modules.push(diode.render(k.pos.x - 0.5, k.pos.y, 90));
           });
         }
       }

@@ -1,4 +1,5 @@
-(module MX_Alps_Hybrid:MX-<%= data.key.size %>U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp <%= data.id %>)
+(module MX_Alps_Hybrid:MX-<%= data.key.size.w %>U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp <%= data.key.id.toString(16) %>0)
   (at
   <%= data.x %>
   <%= data.y %>
@@ -17,10 +18,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start <%= -9.525*data.key.size %> -9.525) (end <%= 9.525*data.key.size %> -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start <%= 9.525*data.key.size %> -9.525) (end <%= 9.525*data.key.size %> 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start <%= 9.525*data.key.size %> 9.525) (end <%= -9.525*data.key.size %> 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start <%= -9.525*data.key.size %> 9.525) (end <%= -9.525*data.key.size %> -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start <%= -9.525*data.key.size.w %> -9.525) (end <%= 9.525*data.key.size.w %> -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start <%= 9.525*data.key.size.w %> -9.525) (end <%= 9.525*data.key.size.w %> 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start <%= 9.525*data.key.size.w %> 9.525) (end <%= -9.525*data.key.size.w %> 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start <%= -9.525*data.key.size.w %> 9.525) (end <%= -9.525*data.key.size.w %> -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     <%- data.netForPad(1) %>)
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -41,15 +42,15 @@
   (pad "" np_thru_hole circle (at -5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
 <% } %>
-  <% if (data.key.size >= 2 && data.key.size < 6) { %>  (pad "" np_thru_hole circle (at -11.938 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
+  <% if (data.key.size.w >= 2 && data.key.size.w < 6) { %>  (pad "" np_thru_hole circle (at -11.938 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 11.938 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -11.938 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 11.938 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))<% } %>
-  <% if (data.key.size === 6.25) { %>  (pad "" np_thru_hole circle (at -49.9999 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
+  <% if (data.key.size.w === 6.25) { %>  (pad "" np_thru_hole circle (at -49.9999 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 49.9999 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -49.9999 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 49.9999 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))<% } %>
-  <% if (data.key.size === 7) { %>  (pad "" np_thru_hole circle (at -57.15 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
+  <% if (data.key.size.w === 7) { %>  (pad "" np_thru_hole circle (at -57.15 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 57.15 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -57.15 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 57.15 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))<% } %>

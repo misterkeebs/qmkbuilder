@@ -179,18 +179,18 @@
   (net 87 "Net-(K_P-Pad4)")
   (net 88 "Net-(D_P-Pad1)")
   (net 89 "Net-(D_P-Pad2)")
-  (net 90 "Net-(K_[-Pad1)")
-  (net 91 "Net-(K_[-Pad2)")
-  (net 92 "Net-(K_[-Pad3)")
-  (net 93 "Net-(K_[-Pad4)")
-  (net 94 "Net-(D_[-Pad1)")
-  (net 95 "Net-(D_[-Pad2)")
-  (net 96 "Net-(K_]-Pad1)")
-  (net 97 "Net-(K_]-Pad2)")
-  (net 98 "Net-(K_]-Pad3)")
-  (net 99 "Net-(K_]-Pad4)")
-  (net 100 "Net-(D_]-Pad1)")
-  (net 101 "Net-(D_]-Pad2)")
+  (net 90 "Net-(K_CBRAC-Pad1)")
+  (net 91 "Net-(K_CBRAC-Pad2)")
+  (net 92 "Net-(K_CBRAC-Pad3)")
+  (net 93 "Net-(K_CBRAC-Pad4)")
+  (net 94 "Net-(D_CBRAC-Pad1)")
+  (net 95 "Net-(D_CBRAC-Pad2)")
+  (net 96 "Net-(K_OBRAC-Pad1)")
+  (net 97 "Net-(K_OBRAC-Pad2)")
+  (net 98 "Net-(K_OBRAC-Pad3)")
+  (net 99 "Net-(K_OBRAC-Pad4)")
+  (net 100 "Net-(D_OBRAC-Pad1)")
+  (net 101 "Net-(D_OBRAC-Pad2)")
   (net 102 "Net-(K_BS-Pad1)")
   (net 103 "Net-(K_BS-Pad2)")
   (net 104 "Net-(K_BS-Pad3)")
@@ -499,18 +499,18 @@
   (add_net "Net-(K_P-Pad4)")
   (add_net "Net-(D_P-Pad1)")
   (add_net "Net-(D_P-Pad2)")
-  (add_net "Net-(K_[-Pad1)")
-  (add_net "Net-(K_[-Pad2)")
-  (add_net "Net-(K_[-Pad3)")
-  (add_net "Net-(K_[-Pad4)")
-  (add_net "Net-(D_[-Pad1)")
-  (add_net "Net-(D_[-Pad2)")
-  (add_net "Net-(K_]-Pad1)")
-  (add_net "Net-(K_]-Pad2)")
-  (add_net "Net-(K_]-Pad3)")
-  (add_net "Net-(K_]-Pad4)")
-  (add_net "Net-(D_]-Pad1)")
-  (add_net "Net-(D_]-Pad2)")
+  (add_net "Net-(K_CBRAC-Pad1)")
+  (add_net "Net-(K_CBRAC-Pad2)")
+  (add_net "Net-(K_CBRAC-Pad3)")
+  (add_net "Net-(K_CBRAC-Pad4)")
+  (add_net "Net-(D_CBRAC-Pad1)")
+  (add_net "Net-(D_CBRAC-Pad2)")
+  (add_net "Net-(K_OBRAC-Pad1)")
+  (add_net "Net-(K_OBRAC-Pad2)")
+  (add_net "Net-(K_OBRAC-Pad3)")
+  (add_net "Net-(K_OBRAC-Pad4)")
+  (add_net "Net-(D_OBRAC-Pad1)")
+  (add_net "Net-(D_OBRAC-Pad2)")
   (add_net "Net-(K_BS-Pad1)")
   (add_net "Net-(K_BS-Pad2)")
   (add_net "Net-(K_BS-Pad3)")
@@ -723,10 +723,11 @@
   (add_net "Net-(D_OPT1-Pad2)")
 )
 
-  (module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+  (module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 00)
   (at
-  NaN
-  NaN
+  33.3375
+  9.525
   )
   (fp_text reference K_ESC (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -742,10 +743,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 24 "Net-(K_ESC-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -762,10 +763,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 01)
     (at
-    NaN
-    NaN
+    24.3125
+    10.025
     90)
     (attr smd)
     (fp_text reference D_ESC (at 0 1.925 90) (layer F.SilkS)
@@ -797,10 +799,11 @@
       (net 29 "Net-(D_ESC-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 10)
   (at
-  NaN
-  NaN
+  52.3875
+  9.525
   )
   (fp_text reference K_Q (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -816,10 +819,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 30 "Net-(K_Q-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -836,10 +839,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 11)
     (at
-    NaN
-    NaN
+    43.3625
+    10.025
     90)
     (attr smd)
     (fp_text reference D_Q (at 0 1.925 90) (layer F.SilkS)
@@ -871,10 +875,11 @@
       (net 35 "Net-(D_Q-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 20)
   (at
-  NaN
-  NaN
+  71.4375
+  9.525
   )
   (fp_text reference K_W (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -890,10 +895,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 36 "Net-(K_W-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -910,10 +915,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 21)
     (at
-    NaN
-    NaN
+    62.4125
+    10.025
     90)
     (attr smd)
     (fp_text reference D_W (at 0 1.925 90) (layer F.SilkS)
@@ -945,10 +951,11 @@
       (net 41 "Net-(D_W-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 30)
   (at
-  NaN
-  NaN
+  90.4875
+  9.525
   )
   (fp_text reference K_E (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -964,10 +971,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 42 "Net-(K_E-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -984,10 +991,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 31)
     (at
-    NaN
-    NaN
+    81.4625
+    10.025
     90)
     (attr smd)
     (fp_text reference D_E (at 0 1.925 90) (layer F.SilkS)
@@ -1019,10 +1027,11 @@
       (net 47 "Net-(D_E-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 40)
   (at
-  NaN
-  NaN
+  109.5375
+  9.525
   )
   (fp_text reference K_R (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1038,10 +1047,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 48 "Net-(K_R-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1058,10 +1067,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 41)
     (at
-    NaN
-    NaN
+    100.5125
+    10.025
     90)
     (attr smd)
     (fp_text reference D_R (at 0 1.925 90) (layer F.SilkS)
@@ -1093,10 +1103,11 @@
       (net 53 "Net-(D_R-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 50)
   (at
-  NaN
-  NaN
+  128.5875
+  9.525
   )
   (fp_text reference K_T (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1112,10 +1123,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 54 "Net-(K_T-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1132,10 +1143,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 51)
     (at
-    NaN
-    NaN
+    119.5625
+    10.025
     90)
     (attr smd)
     (fp_text reference D_T (at 0 1.925 90) (layer F.SilkS)
@@ -1167,10 +1179,11 @@
       (net 59 "Net-(D_T-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 60)
   (at
-  NaN
-  NaN
+  147.6375
+  9.525
   )
   (fp_text reference K_Y (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1186,10 +1199,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 60 "Net-(K_Y-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1206,10 +1219,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 61)
     (at
-    NaN
-    NaN
+    138.6125
+    10.025
     90)
     (attr smd)
     (fp_text reference D_Y (at 0 1.925 90) (layer F.SilkS)
@@ -1241,10 +1255,11 @@
       (net 65 "Net-(D_Y-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 70)
   (at
-  NaN
-  NaN
+  166.6875
+  9.525
   )
   (fp_text reference K_U (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1260,10 +1275,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 66 "Net-(K_U-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1280,10 +1295,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 71)
     (at
-    NaN
-    NaN
+    157.6625
+    10.025
     90)
     (attr smd)
     (fp_text reference D_U (at 0 1.925 90) (layer F.SilkS)
@@ -1315,10 +1331,11 @@
       (net 71 "Net-(D_U-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 80)
   (at
-  NaN
-  NaN
+  185.7375
+  9.525
   )
   (fp_text reference K_I (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1334,10 +1351,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 72 "Net-(K_I-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1354,10 +1371,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 81)
     (at
-    NaN
-    NaN
+    176.7125
+    10.025
     90)
     (attr smd)
     (fp_text reference D_I (at 0 1.925 90) (layer F.SilkS)
@@ -1389,10 +1407,11 @@
       (net 77 "Net-(D_I-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 90)
   (at
-  NaN
-  NaN
+  204.7875
+  9.525
   )
   (fp_text reference K_O (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1408,10 +1427,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 78 "Net-(K_O-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1428,10 +1447,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 91)
     (at
-    NaN
-    NaN
+    195.7625
+    10.025
     90)
     (attr smd)
     (fp_text reference D_O (at 0 1.925 90) (layer F.SilkS)
@@ -1463,10 +1483,11 @@
       (net 83 "Net-(D_O-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp a0)
   (at
-  NaN
-  NaN
+  223.8375
+  9.525
   )
   (fp_text reference K_P (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1482,10 +1503,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 84 "Net-(K_P-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1502,10 +1523,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp a1)
     (at
-    NaN
-    NaN
+    214.8125
+    10.025
     90)
     (attr smd)
     (fp_text reference D_P (at 0 1.925 90) (layer F.SilkS)
@@ -1537,12 +1559,13 @@
       (net 89 "Net-(D_P-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp b0)
   (at
-  NaN
-  NaN
+  242.8875
+  9.525
   )
-  (fp_text reference K_[ (at 0 3.175) (layer Dwgs.User)
+  (fp_text reference K_CBRAC (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value KEYSW (at 0 -7.9375) (layer Dwgs.User)
@@ -1556,18 +1579,18 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
-    (net 90 "Net-(K_[-Pad1)"))
+    (net 90 "Net-(K_CBRAC-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
-    (net 90 "Net-(K_[-Pad1)"))
+    (net 90 "Net-(K_CBRAC-Pad1)"))
   (pad 2 thru_hole oval (at 2.5 -4.5 86.0548) (size 2.831378 2.25) (drill 1.47 (offset 0.290689 0)) (layers *.Cu B.Mask)
-    (net 95 "Net-(D_[-Pad2)"))
+    (net 95 "Net-(D_CBRAC-Pad2)"))
   (pad 2 thru_hole circle (at 2.54 -5.08) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
-    (net 95 "Net-(D_[-Pad2)"))
+    (net 95 "Net-(D_CBRAC-Pad2)"))
   (pad "" np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
@@ -1576,13 +1599,14 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp b1)
     (at
-    NaN
-    NaN
+    233.8625
+    10.025
     90)
     (attr smd)
-    (fp_text reference D_[ (at 0 1.925 90) (layer F.SilkS)
+    (fp_text reference D_CBRAC (at 0 1.925 90) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror))
     )
     (fp_text value D (at 0 -1.925 90) (layer F.SilkS) hide
@@ -1604,19 +1628,20 @@
     (pad 1 thru_hole rect (at -3.9 0 90) (size 1.6 1.6) (drill 0.7) (layers *.Cu *.Mask F.SilkS)
       (net 15 "/col12"))
     (pad 2 smd rect (at 1.575 0 90) (size 1.2 1.2) (layers F.Cu F.Paste F.Mask)
-      (net 95 "Net-(D_[-Pad2)"))
+      (net 95 "Net-(D_CBRAC-Pad2)"))
     (pad 2 smd rect (at 2.7 0 90) (size 2.5 0.5) (layers F.Cu)
-      (net 95 "Net-(D_[-Pad2)"))
+      (net 95 "Net-(D_CBRAC-Pad2)"))
     (pad 2 thru_hole circle (at 3.9 0 90) (size 1.6 1.6) (drill 0.7) (layers *.Cu *.Mask F.SilkS)
-      (net 95 "Net-(D_[-Pad2)"))
+      (net 95 "Net-(D_CBRAC-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp c0)
   (at
-  NaN
-  NaN
+  261.9375
+  9.525
   )
-  (fp_text reference K_] (at 0 3.175) (layer Dwgs.User)
+  (fp_text reference K_OBRAC (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value KEYSW (at 0 -7.9375) (layer Dwgs.User)
@@ -1630,18 +1655,18 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
-    (net 96 "Net-(K_]-Pad1)"))
+    (net 96 "Net-(K_OBRAC-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
-    (net 96 "Net-(K_]-Pad1)"))
+    (net 96 "Net-(K_OBRAC-Pad1)"))
   (pad 2 thru_hole oval (at 2.5 -4.5 86.0548) (size 2.831378 2.25) (drill 1.47 (offset 0.290689 0)) (layers *.Cu B.Mask)
-    (net 101 "Net-(D_]-Pad2)"))
+    (net 101 "Net-(D_OBRAC-Pad2)"))
   (pad 2 thru_hole circle (at 2.54 -5.08) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
-    (net 101 "Net-(D_]-Pad2)"))
+    (net 101 "Net-(D_OBRAC-Pad2)"))
   (pad "" np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
@@ -1650,13 +1675,14 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp c1)
     (at
-    NaN
-    NaN
+    252.9125
+    10.025
     90)
     (attr smd)
-    (fp_text reference D_] (at 0 1.925 90) (layer F.SilkS)
+    (fp_text reference D_OBRAC (at 0 1.925 90) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror))
     )
     (fp_text value D (at 0 -1.925 90) (layer F.SilkS) hide
@@ -1678,17 +1704,18 @@
     (pad 1 thru_hole rect (at -3.9 0 90) (size 1.6 1.6) (drill 0.7) (layers *.Cu *.Mask F.SilkS)
       (net 16 "/col13"))
     (pad 2 smd rect (at 1.575 0 90) (size 1.2 1.2) (layers F.Cu F.Paste F.Mask)
-      (net 101 "Net-(D_]-Pad2)"))
+      (net 101 "Net-(D_OBRAC-Pad2)"))
     (pad 2 smd rect (at 2.7 0 90) (size 2.5 0.5) (layers F.Cu)
-      (net 101 "Net-(D_]-Pad2)"))
+      (net 101 "Net-(D_OBRAC-Pad2)"))
     (pad 2 thru_hole circle (at 3.9 0 90) (size 1.6 1.6) (drill 0.7) (layers *.Cu *.Mask F.SilkS)
-      (net 101 "Net-(D_]-Pad2)"))
+      (net 101 "Net-(D_OBRAC-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp d0)
   (at
-  NaN
-  NaN
+  280.9875
+  9.525
   )
   (fp_text reference K_BS (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1704,10 +1731,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 102 "Net-(K_BS-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1724,10 +1751,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp d1)
     (at
-    NaN
-    NaN
+    271.9625
+    10.025
     90)
     (attr smd)
     (fp_text reference D_BS (at 0 1.925 90) (layer F.SilkS)
@@ -1759,10 +1787,11 @@
       (net 107 "Net-(D_BS-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp e0)
   (at
-  NaN
-  NaN
+  9.525
+  28.575
   )
   (fp_text reference K_M2 (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1778,10 +1807,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 108 "Net-(K_M2-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1798,10 +1827,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp e1)
     (at
-    NaN
-    NaN
+    0.5
+    29.075
     90)
     (attr smd)
     (fp_text reference D_M2 (at 0 1.925 90) (layer F.SilkS)
@@ -1833,10 +1863,11 @@
       (net 113 "Net-(D_M2-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1.25U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp f0)
   (at
-  NaN
-  NaN
+  35.71875
+  28.575
   )
   (fp_text reference K_CAPS (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1852,10 +1883,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 -9.525) (end 11.90625 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 -9.525) (end 11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 9.525) (end -11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 9.525) (end -11.90625 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 114 "Net-(K_CAPS-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1872,10 +1903,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp f1)
     (at
-    NaN
-    NaN
+    24.3125
+    29.075
     90)
     (attr smd)
     (fp_text reference D_CAPS (at 0 1.925 90) (layer F.SilkS)
@@ -1907,10 +1939,11 @@
       (net 119 "Net-(D_CAPS-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 100)
   (at
-  NaN
-  NaN
+  57.15
+  28.575
   )
   (fp_text reference K_A (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -1926,10 +1959,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 120 "Net-(K_A-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -1946,10 +1979,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 101)
     (at
-    NaN
-    NaN
+    48.125
+    29.075
     90)
     (attr smd)
     (fp_text reference D_A (at 0 1.925 90) (layer F.SilkS)
@@ -1981,10 +2015,11 @@
       (net 125 "Net-(D_A-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 110)
   (at
-  NaN
-  NaN
+  76.2
+  28.575
   )
   (fp_text reference K_S (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2000,10 +2035,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 126 "Net-(K_S-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2020,10 +2055,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 111)
     (at
-    NaN
-    NaN
+    67.175
+    29.075
     90)
     (attr smd)
     (fp_text reference D_S (at 0 1.925 90) (layer F.SilkS)
@@ -2055,10 +2091,11 @@
       (net 131 "Net-(D_S-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 120)
   (at
-  NaN
-  NaN
+  95.25
+  28.575
   )
   (fp_text reference K_D (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2074,10 +2111,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 132 "Net-(K_D-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2094,10 +2131,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 121)
     (at
-    NaN
-    NaN
+    86.225
+    29.075
     90)
     (attr smd)
     (fp_text reference D_D (at 0 1.925 90) (layer F.SilkS)
@@ -2129,10 +2167,11 @@
       (net 137 "Net-(D_D-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 130)
   (at
-  NaN
-  NaN
+  114.3
+  28.575
   )
   (fp_text reference K_F (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2148,10 +2187,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 138 "Net-(K_F-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2168,10 +2207,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 131)
     (at
-    NaN
-    NaN
+    105.275
+    29.075
     90)
     (attr smd)
     (fp_text reference D_F (at 0 1.925 90) (layer F.SilkS)
@@ -2203,10 +2243,11 @@
       (net 143 "Net-(D_F-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 140)
   (at
-  NaN
-  NaN
+  133.35
+  28.575
   )
   (fp_text reference K_G (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2222,10 +2263,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 144 "Net-(K_G-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2242,10 +2283,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 141)
     (at
-    NaN
-    NaN
+    124.325
+    29.075
     90)
     (attr smd)
     (fp_text reference D_G (at 0 1.925 90) (layer F.SilkS)
@@ -2277,10 +2319,11 @@
       (net 149 "Net-(D_G-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 150)
   (at
-  NaN
-  NaN
+  152.4
+  28.575
   )
   (fp_text reference K_H (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2296,10 +2339,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 150 "Net-(K_H-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2316,10 +2359,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 151)
     (at
-    NaN
-    NaN
+    143.375
+    29.075
     90)
     (attr smd)
     (fp_text reference D_H (at 0 1.925 90) (layer F.SilkS)
@@ -2351,10 +2395,11 @@
       (net 155 "Net-(D_H-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 160)
   (at
-  NaN
-  NaN
+  171.45
+  28.575
   )
   (fp_text reference K_J (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2370,10 +2415,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 156 "Net-(K_J-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2390,10 +2435,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 161)
     (at
-    NaN
-    NaN
+    162.425
+    29.075
     90)
     (attr smd)
     (fp_text reference D_J (at 0 1.925 90) (layer F.SilkS)
@@ -2425,10 +2471,11 @@
       (net 161 "Net-(D_J-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 170)
   (at
-  NaN
-  NaN
+  190.5
+  28.575
   )
   (fp_text reference K_K (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2444,10 +2491,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 162 "Net-(K_K-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2464,10 +2511,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 171)
     (at
-    NaN
-    NaN
+    181.475
+    29.075
     90)
     (attr smd)
     (fp_text reference D_K (at 0 1.925 90) (layer F.SilkS)
@@ -2499,10 +2547,11 @@
       (net 167 "Net-(D_K-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 180)
   (at
-  NaN
-  NaN
+  209.55
+  28.575
   )
   (fp_text reference K_L (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2518,10 +2567,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 168 "Net-(K_L-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2538,10 +2587,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 181)
     (at
-    NaN
-    NaN
+    200.525
+    29.075
     90)
     (attr smd)
     (fp_text reference D_L (at 0 1.925 90) (layer F.SilkS)
@@ -2573,10 +2623,11 @@
       (net 173 "Net-(D_L-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 190)
   (at
-  NaN
-  NaN
+  228.6
+  28.575
   )
   (fp_text reference K_SEMIC (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2592,10 +2643,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 174 "Net-(K_SEMIC-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2612,10 +2663,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 191)
     (at
-    NaN
-    NaN
+    219.575
+    29.075
     90)
     (attr smd)
     (fp_text reference D_SEMIC (at 0 1.925 90) (layer F.SilkS)
@@ -2647,10 +2699,11 @@
       (net 179 "Net-(D_SEMIC-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 1a0)
   (at
-  NaN
-  NaN
+  247.65
+  28.575
   )
   (fp_text reference K_QUOTE (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2666,10 +2719,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 180 "Net-(K_QUOTE-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2686,10 +2739,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 1a1)
     (at
-    NaN
-    NaN
+    238.625
+    29.075
     90)
     (attr smd)
     (fp_text reference D_QUOTE (at 0 1.925 90) (layer F.SilkS)
@@ -2721,10 +2775,11 @@
       (net 185 "Net-(D_QUOTE-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1.75U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 1b0)
   (at
-  NaN
-  NaN
+  273.84375
+  28.575
   )
   (fp_text reference K_ENTER (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2740,10 +2795,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -16.66875 -9.525) (end 16.66875 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 16.66875 -9.525) (end 16.66875 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 16.66875 9.525) (end -16.66875 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -16.66875 9.525) (end -16.66875 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 186 "Net-(K_ENTER-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2760,10 +2815,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 1b1)
     (at
-    NaN
-    NaN
+    257.675
+    29.075
     90)
     (attr smd)
     (fp_text reference D_ENTER (at 0 1.925 90) (layer F.SilkS)
@@ -2795,10 +2851,11 @@
       (net 191 "Net-(D_ENTER-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 1c0)
   (at
-  NaN
-  NaN
+  9.525
+  47.625
   )
   (fp_text reference K_M3 (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2814,10 +2871,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 192 "Net-(K_M3-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2834,10 +2891,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 1c1)
     (at
-    NaN
-    NaN
+    0.5
+    48.125
     90)
     (attr smd)
     (fp_text reference D_M3 (at 0 1.925 90) (layer F.SilkS)
@@ -2869,10 +2927,11 @@
       (net 197 "Net-(D_M3-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1.75U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 1d0)
   (at
-  NaN
-  NaN
+  40.48125
+  47.625
   )
   (fp_text reference K_SHIFT (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2888,10 +2947,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -16.66875 -9.525) (end 16.66875 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 16.66875 -9.525) (end 16.66875 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 16.66875 9.525) (end -16.66875 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -16.66875 9.525) (end -16.66875 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 198 "Net-(K_SHIFT-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2908,10 +2967,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 1d1)
     (at
-    NaN
-    NaN
+    24.3125
+    48.125
     90)
     (attr smd)
     (fp_text reference D_SHIFT (at 0 1.925 90) (layer F.SilkS)
@@ -2943,10 +3003,11 @@
       (net 203 "Net-(D_SHIFT-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 1e0)
   (at
-  NaN
-  NaN
+  66.675
+  47.625
   )
   (fp_text reference K_Z (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -2962,10 +3023,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 204 "Net-(K_Z-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -2982,10 +3043,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 1e1)
     (at
-    NaN
-    NaN
+    57.65
+    48.125
     90)
     (attr smd)
     (fp_text reference D_Z (at 0 1.925 90) (layer F.SilkS)
@@ -3017,10 +3079,11 @@
       (net 209 "Net-(D_Z-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 1f0)
   (at
-  NaN
-  NaN
+  85.725
+  47.625
   )
   (fp_text reference K_X (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3036,10 +3099,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 210 "Net-(K_X-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3056,10 +3119,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 1f1)
     (at
-    NaN
-    NaN
+    76.7
+    48.125
     90)
     (attr smd)
     (fp_text reference D_X (at 0 1.925 90) (layer F.SilkS)
@@ -3091,10 +3155,11 @@
       (net 215 "Net-(D_X-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 200)
   (at
-  NaN
-  NaN
+  104.775
+  47.625
   )
   (fp_text reference K_C (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3110,10 +3175,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 216 "Net-(K_C-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3130,10 +3195,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 201)
     (at
-    NaN
-    NaN
+    95.75
+    48.125
     90)
     (attr smd)
     (fp_text reference D_C (at 0 1.925 90) (layer F.SilkS)
@@ -3165,10 +3231,11 @@
       (net 221 "Net-(D_C-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 210)
   (at
-  NaN
-  NaN
+  123.825
+  47.625
   )
   (fp_text reference K_V (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3184,10 +3251,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 222 "Net-(K_V-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3204,10 +3271,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 211)
     (at
-    NaN
-    NaN
+    114.8
+    48.125
     90)
     (attr smd)
     (fp_text reference D_V (at 0 1.925 90) (layer F.SilkS)
@@ -3239,10 +3307,11 @@
       (net 227 "Net-(D_V-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 220)
   (at
-  NaN
-  NaN
+  142.875
+  47.625
   )
   (fp_text reference K_B (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3258,10 +3327,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 228 "Net-(K_B-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3278,10 +3347,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 221)
     (at
-    NaN
-    NaN
+    133.85
+    48.125
     90)
     (attr smd)
     (fp_text reference D_B (at 0 1.925 90) (layer F.SilkS)
@@ -3313,10 +3383,11 @@
       (net 233 "Net-(D_B-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 230)
   (at
-  NaN
-  NaN
+  161.925
+  47.625
   )
   (fp_text reference K_N (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3332,10 +3403,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 234 "Net-(K_N-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3352,10 +3423,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 231)
     (at
-    NaN
-    NaN
+    152.9
+    48.125
     90)
     (attr smd)
     (fp_text reference D_N (at 0 1.925 90) (layer F.SilkS)
@@ -3387,10 +3459,11 @@
       (net 239 "Net-(D_N-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 240)
   (at
-  NaN
-  NaN
+  180.975
+  47.625
   )
   (fp_text reference K_M (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3406,10 +3479,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 240 "Net-(K_M-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3426,10 +3499,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 241)
     (at
-    NaN
-    NaN
+    171.95
+    48.125
     90)
     (attr smd)
     (fp_text reference D_M (at 0 1.925 90) (layer F.SilkS)
@@ -3461,10 +3535,11 @@
       (net 245 "Net-(D_M-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 250)
   (at
-  NaN
-  NaN
+  200.025
+  47.625
   )
   (fp_text reference K_COMMA (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3480,10 +3555,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 246 "Net-(K_COMMA-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3500,10 +3575,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 251)
     (at
-    NaN
-    NaN
+    191
+    48.125
     90)
     (attr smd)
     (fp_text reference D_COMMA (at 0 1.925 90) (layer F.SilkS)
@@ -3535,10 +3611,11 @@
       (net 251 "Net-(D_COMMA-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 260)
   (at
-  NaN
-  NaN
+  219.075
+  47.625
   )
   (fp_text reference K_DOT (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3554,10 +3631,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 252 "Net-(K_DOT-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3574,10 +3651,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 261)
     (at
-    NaN
-    NaN
+    210.05
+    48.125
     90)
     (attr smd)
     (fp_text reference D_DOT (at 0 1.925 90) (layer F.SilkS)
@@ -3609,10 +3687,11 @@
       (net 257 "Net-(D_DOT-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 270)
   (at
-  NaN
-  NaN
+  238.125
+  47.625
   )
   (fp_text reference K_SLASH (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3628,10 +3707,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 258 "Net-(K_SLASH-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3648,10 +3727,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 271)
     (at
-    NaN
-    NaN
+    229.1
+    48.125
     90)
     (attr smd)
     (fp_text reference D_SLASH (at 0 1.925 90) (layer F.SilkS)
@@ -3683,10 +3763,11 @@
       (net 263 "Net-(D_SLASH-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1.25U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 280)
   (at
-  NaN
-  NaN
+  259.55625
+  47.625
   )
   (fp_text reference K_SHIFT1 (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3702,10 +3783,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 -9.525) (end 11.90625 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 -9.525) (end 11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 9.525) (end -11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 9.525) (end -11.90625 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 264 "Net-(K_SHIFT1-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3722,10 +3803,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 281)
     (at
-    NaN
-    NaN
+    248.15
+    48.125
     90)
     (attr smd)
     (fp_text reference D_SHIFT1 (at 0 1.925 90) (layer F.SilkS)
@@ -3757,10 +3839,11 @@
       (net 269 "Net-(D_SHIFT1-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 290)
   (at
-  NaN
-  NaN
+  280.9875
+  47.625
   )
   (fp_text reference K_FN (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3776,10 +3859,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 270 "Net-(K_FN-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3796,10 +3879,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 291)
     (at
-    NaN
-    NaN
+    271.9625
+    48.125
     90)
     (attr smd)
     (fp_text reference D_FN (at 0 1.925 90) (layer F.SilkS)
@@ -3831,10 +3915,11 @@
       (net 275 "Net-(D_FN-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 2a0)
   (at
-  NaN
-  NaN
+  9.525
+  66.675
   )
   (fp_text reference K_M4 (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3850,10 +3935,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 276 "Net-(K_M4-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3870,10 +3955,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 2a1)
     (at
-    NaN
-    NaN
+    0.5
+    67.175
     90)
     (attr smd)
     (fp_text reference D_M4 (at 0 1.925 90) (layer F.SilkS)
@@ -3905,10 +3991,11 @@
       (net 281 "Net-(D_M4-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 2b0)
   (at
-  NaN
-  NaN
+  61.9125
+  66.675
   )
   (fp_text reference K_OPT (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3924,10 +4011,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 282 "Net-(K_OPT-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -3944,10 +4031,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 2b1)
     (at
-    NaN
-    NaN
+    52.8875
+    67.175
     90)
     (attr smd)
     (fp_text reference D_OPT (at 0 1.925 90) (layer F.SilkS)
@@ -3979,10 +4067,11 @@
       (net 287 "Net-(D_OPT-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1.25U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 2c0)
   (at
-  NaN
-  NaN
+  83.34375
+  66.675
   )
   (fp_text reference K_ALT (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -3998,10 +4087,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 -9.525) (end 11.90625 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 -9.525) (end 11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 9.525) (end -11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 9.525) (end -11.90625 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 288 "Net-(K_ALT-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -4018,10 +4107,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 2c1)
     (at
-    NaN
-    NaN
+    71.9375
+    67.175
     90)
     (attr smd)
     (fp_text reference D_ALT (at 0 1.925 90) (layer F.SilkS)
@@ -4053,10 +4143,11 @@
       (net 293 "Net-(D_ALT-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-6.25U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 2d0)
   (at
-  NaN
-  NaN
+  154.78125
+  66.675
   )
   (fp_text reference K_SPACE (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -4072,10 +4163,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -59.53125 -9.525) (end 59.53125 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 59.53125 -9.525) (end 59.53125 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 59.53125 9.525) (end -59.53125 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -59.53125 9.525) (end -59.53125 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 294 "Net-(K_SPACE-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -4089,13 +4180,17 @@
   (pad "" np_thru_hole circle (at 5.08 0 48.0996) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
 
   
-  
+    (pad "" np_thru_hole circle (at -49.9999 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
+  (pad "" np_thru_hole circle (at 49.9999 -6.985) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask))
+  (pad "" np_thru_hole circle (at -49.9999 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
+  (pad "" np_thru_hole circle (at 49.9999 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 2d1)
     (at
-    NaN
-    NaN
+    95.75
+    67.175
     90)
     (attr smd)
     (fp_text reference D_SPACE (at 0 1.925 90) (layer F.SilkS)
@@ -4127,10 +4222,11 @@
       (net 299 "Net-(D_SPACE-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1.25U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 2e0)
   (at
-  NaN
-  NaN
+  226.21875
+  66.675
   )
   (fp_text reference K_ALT1 (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -4146,10 +4242,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 -9.525) (end 11.90625 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 -9.525) (end 11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 11.90625 9.525) (end -11.90625 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -11.90625 9.525) (end -11.90625 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 300 "Net-(K_ALT1-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -4166,10 +4262,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 2e1)
     (at
-    NaN
-    NaN
+    214.8125
+    67.175
     90)
     (attr smd)
     (fp_text reference D_ALT1 (at 0 1.925 90) (layer F.SilkS)
@@ -4201,10 +4298,11 @@
       (net 305 "Net-(D_ALT1-Pad2)"))
   )
 
-(module MX_Alps_Hybrid:MX-[object Object]U-NoLED (layer F.Cu) (tedit 5A9F5203) (tstamp )
+(module MX_Alps_Hybrid:MX-1U-NoLED (layer F.Cu) (tedit 5A9F5203)
+  (tstamp 2f0)
   (at
-  NaN
-  NaN
+  247.65
+  66.675
   )
   (fp_text reference K_OPT1 (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -4220,10 +4318,10 @@
   (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
   (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN -9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN 9.525) (layer Dwgs.User) (width 0.15))
-  (fp_line (start NaN 9.525) (end NaN -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
+  (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
   (pad 1 thru_hole circle (at -2.5 -4) (size 2.25 2.25) (drill 1.47) (layers *.Cu B.Mask)
     (net 306 "Net-(K_OPT1-Pad1)"))
   (pad 1 thru_hole oval (at -3.81 -2.54 48.0996) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu B.Mask)
@@ -4240,10 +4338,11 @@
   
   
 )
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12) (tstamp )
+(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+    (tstamp 2f1)
     (at
-    NaN
-    NaN
+    238.625
+    67.175
     90)
     (attr smd)
     (fp_text reference D_OPT1 (at 0 1.925 90) (layer F.SilkS)

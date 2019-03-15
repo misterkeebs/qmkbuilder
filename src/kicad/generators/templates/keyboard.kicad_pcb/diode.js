@@ -1,13 +1,15 @@
 const Component = require('./component');
 
 class Diode extends Component {
-  constructor(k, nets) {
-    super('diode', `D_${k.name}`, 2, nets);
-    this.setPad(1, `/col${k.col}`);
+  constructor(key, nets) {
+    super('diode', `D_${key.name}`, 2, nets);
+    this.setPad(1, `/col${key.col}`);
+    this.key = key;
   }
 
   getAdditionalData(x, y, options) {
     return {
+      key: this.key,
       x: ((x + 0.5) * 1905) / 100,
       y: ((y + 0.5) * 1905) / 100,
     };

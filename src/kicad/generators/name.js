@@ -14,6 +14,8 @@ const xlateMap = {
   '←': 'LEFT',
   '→': 'RIGHT',
   '→': 'RIGHT',
+  ']': 'OBRAC',
+  '[': 'CBRAC',
 }
 
 module.exports = (name) => {
