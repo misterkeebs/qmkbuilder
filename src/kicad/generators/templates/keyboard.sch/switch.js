@@ -6,7 +6,7 @@ const y = data.y;
 L keyboard_parts:KEYSW K_<%= data.name %>
 U 1 1 <%= data.id %>1
 P <%= x %> <%= y %>
-F 0 "<%= data.name %>" H <%= x %> <%= y + 233 %> 60  0000 C CNN
+F 0 "K_<%= data.name %>" H <%= x %> <%= y + 233 %> 60  0000 C CNN
 F 1 "KEYSW" H <%= x %> <%= y - 100 %> 60  0001 C CNN
 F 2 "MX_Alps_Hybrid:MX-<%= data.key.size.w %>U-NoLED" H <%= x %> <%= y %> 60  0001 C CNN
 F 3 "" H <%= x %> <%= y %> 60  0000 C CNN
@@ -29,4 +29,5 @@ Wire Wire Line
 Wire Wire Line
 	<%= x - 350 %> <%= y %> <%= x - 350 %> <%= y + 100 %>
 Connection ~ <%= x + 300 %> <%= y %>
+Connection ~ <%= x - 350 %> <%= y + 400 %>
 `;
