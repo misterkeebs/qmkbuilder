@@ -114,7 +114,6 @@ class Compile extends React.Component {
 	downloadKiCad() {
 		const state = this.props.state;
 		const keyboard = state.keyboard;
-    console.log('keyboard', keyboard);
 
 		// Disable buttons.
 		state.ui.set('compile-working', true);
@@ -143,7 +142,6 @@ class Compile extends React.Component {
 					const friendly = keyboard.settings.name ?
 						Utils.generateFriendly(keyboard.settings.name) : 'layout';
 
-					console.log('before save');
 					saveAs(blob, friendly + '.zip');
 
 					// Re-enable buttons.

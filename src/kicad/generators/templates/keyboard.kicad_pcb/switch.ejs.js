@@ -1,9 +1,9 @@
-(module MX_Alps_Hybrid:MX-<%= data.key.size.w %>U-NoLED (layer F.Cu) (tedit 5A9F5203)
+module.exports = `(module MX_Alps_Hybrid:MX-<%= data.key.size.w %>U-NoLED (layer F.Cu) (tedit 5A9F5203)
   (tstamp <%= data.key.id.toString(16) %>0)
   (at
   <%= data.x %>
   <%= data.y %>
-  <%= data.rotation ? ` ${90-data.rotation}` : `` %>)
+  <%= data.rotation ? \` \${90-data.rotation}\` : \`\` %>)
   (fp_text reference K_<%= data.key.name %> (at 0 3.175) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -55,3 +55,4 @@
   (pad "" np_thru_hole circle (at -57.15 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 57.15 8.255) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))<% } %>
 )
+`;

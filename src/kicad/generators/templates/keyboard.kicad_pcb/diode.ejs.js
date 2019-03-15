@@ -1,4 +1,4 @@
-(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
+module.exports = `(module keyboard_parts:D_SOD123_axial (layer F.Cu) (tedit 561B6A12)
     (tstamp <%= data.key.id.toString(16) %>1)
     (at
     <%= data.x + 0.5 %>
@@ -34,3 +34,4 @@
       <%- data.netForPad(2) %>)
   )
 
+`;

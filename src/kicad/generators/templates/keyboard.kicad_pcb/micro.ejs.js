@@ -1,4 +1,4 @@
-  (module Package_QFP:TQFP-44_10x10mm_P0.8mm (layer B.Cu) (tedit 5A02F146) (tstamp <%= data.tstamp %>)
+module.exports = `  (module Package_QFP:TQFP-44_10x10mm_P0.8mm (layer B.Cu) (tedit 5A02F146) (tstamp <%= data.tstamp %>)
     (at <%= data.x %> <%= data.y %> <%= data.rotation %>)
     (descr "44-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1.0 mm Body [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "QFP 0.8")
@@ -119,9 +119,10 @@
       <%- data.netForPad(43) %>)
     (pad 44 smd rect (at -4 5.7 270) (size 1.5 0.55) (layers B.Cu B.Paste B.Mask)
       <%- data.netForPad(44) %>)
-    (model ${KISYS3DMOD}/Package_QFP.3dshapes/TQFP-44_10x10mm_P0.8mm.wrl
+    (model \\\${KISYS3DMOD}/Package_QFP.3dshapes/TQFP-44_10x10mm_P0.8mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
+`;

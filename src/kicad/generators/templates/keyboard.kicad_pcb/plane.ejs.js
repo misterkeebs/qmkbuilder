@@ -1,4 +1,4 @@
-  (zone (net 0) (net_name <%= data.name %>) (layer <%= data.layer %>) (tstamp 0) (hatch edge 0.508)
+module.exports = `  (zone (net 0) (net_name <%= data.name %>) (layer <%= data.layer %>) (tstamp 0) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -13,3 +13,4 @@
       )
     )
   )
+`;

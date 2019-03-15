@@ -1,4 +1,4 @@
-  (module Button_Switch_SMD:SW_SPST_TL3342 (layer B.Cu) (tedit 5A02FC95) (tstamp <%= data.tstamp %>)
+module.exports = `  (module Button_Switch_SMD:SW_SPST_TL3342 (layer B.Cu) (tedit 5A02FC95) (tstamp <%= data.tstamp %>)
     (at <%= data.x %> <%= data.y %> <%= data.rotation %>)
     (descr "Low-profile SMD Tactile Switch, https://www.e-switch.com/system/asset/product_line/data_sheet/165/TL3342.pdf")
     (tags "SPST Tactile Switch")
@@ -66,9 +66,11 @@
       <%- data.netForPad(2) %>)
     (pad 2 smd rect (at 3.15 -1.9 <%= data.rotation %>) (size 1.7 1) (layers B.Cu B.Paste B.Mask)
       <%- data.netForPad(2) %>)
-    (model ${KISYS3DMOD}/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.wrl
+    (model \\\${KISYS3DMOD}/Button_Switch_SMD.3dshapes/SW_SPST_TL3342.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
+`
+;

@@ -1,4 +1,4 @@
-  (module Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder (layer B.Cu) (tedit 5B36C52B) (tstamp <%= data.tstamp %>)
+module.exports = `  (module Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder (layer B.Cu) (tedit 5B36C52B) (tstamp <%= data.tstamp %>)
     (at <%= data.x %> <%= data.y %> <%= data.rotation %>)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
@@ -27,9 +27,10 @@
       <%- data.netForPad(1) %>)
     (pad 2 smd roundrect (at 1.025 0 <%= data.rotation %>) (size 1.15 1.4) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.217391)
       (net 1 GND))
-    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl
+    (model \\\${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
+`;

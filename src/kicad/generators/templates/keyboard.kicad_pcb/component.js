@@ -29,9 +29,8 @@ class Component {
     }
   }
 
-  renderTemplate(template, vars) {
-    const contents = fs.readFileSync(template, 'utf8');
-    return ejs.render(contents, vars);
+  renderTemplate(vars) {
+    return ejs.render(this.template, vars);
   }
 
   getNext() {
@@ -79,7 +78,7 @@ class Component {
     data.x = data.x + Component.options.initX;
     data.y = data.y + Component.options.initY;
 
-    return this.renderTemplate(`${__dirname}/${this.type}.ejs`, { data });
+    return this.renderTemplate({ data });
   }
 }
 

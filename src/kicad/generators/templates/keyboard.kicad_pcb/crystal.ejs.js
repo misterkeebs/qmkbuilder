@@ -1,4 +1,4 @@
-(module Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm (layer B.Cu) (tedit 5A0FD1B2) (tstamp <%= data.tstamp %>)
+module.exports = `(module Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm (layer B.Cu) (tedit 5A0FD1B2) (tstamp <%= data.tstamp %>)
     (at <%= data.x %> <%= data.y %> <%= data.rotation %>)
     (descr "SMD Crystal SERIES SMD2520/4 http://www.icbase.com/File/PDF/HKC/HKC00061008.pdf, 5.0x3.2mm^2 package")
     (tags "SMD SMT crystal")
@@ -36,9 +36,11 @@
       (net 1 GND))
     (pad 4 smd rect (at -1.65 1 <%= data.rotation %>) (size 1.6 1.3) (layers B.Cu B.Paste B.Mask)
       <%- data.netForPad(4) %>)
-    (model ${KISYS3DMOD}/Crystal.3dshapes/Crystal_SMD_5032-4Pin_5.0x3.2mm.wrl
+    (model \\\${KISYS3DMOD}/Crystal.3dshapes/Crystal_SMD_5032-4Pin_5.0x3.2mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
+`
+;

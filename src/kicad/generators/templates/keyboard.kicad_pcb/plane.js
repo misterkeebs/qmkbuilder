@@ -3,6 +3,7 @@ const Rectangular = require('./rectangular');
 class Plane extends Rectangular {
   constructor(kb, name, layer, gap=2) {
     super(kb, 'plane', name, gap);
+    this.template = require('./plane.ejs');
     this.layer = layer;
   }
 

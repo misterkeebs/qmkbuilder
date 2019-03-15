@@ -4,6 +4,7 @@ class Diode extends Component {
   constructor(key, nets) {
     super('diode', `D_${key.name}`, 2, nets);
     this.setPad(1, `/col${key.col}`);
+    this.template = require('./diode.ejs');
     this.key = key;
   }
 

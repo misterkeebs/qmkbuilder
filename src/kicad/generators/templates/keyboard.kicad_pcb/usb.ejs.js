@@ -1,4 +1,4 @@
-(module keyboard_parts:USB_miniB_hirose_5S8 (layer B.Cu) (tedit 5950B1FC) (tstamp <%= data.tstamp %>)
+module.exports = `(module keyboard_parts:USB_miniB_hirose_5S8 (layer B.Cu) (tedit 5950B1FC) (tstamp <%= data.tstamp %>)
     (at <%= data.x %> <%= data.y %> <%= data.rotation %>)
     (descr "USB miniB hirose UX60SC-MB-5S8")
     (tags "USB miniB hirose through hole UX60SC-MB-5S8")
@@ -38,3 +38,4 @@
     (pad 6 thru_hole oval (at 3.65 -2.4 <%= data.rotation %>) (size 1.5 4) (drill oval 0.7 3.2) (layers *.Cu *.Mask B.Paste)
       (net 1 GND))
   )
+`;

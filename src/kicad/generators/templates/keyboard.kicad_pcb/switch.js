@@ -3,6 +3,7 @@ const Component = require('./component');
 class Switch extends Component {
   constructor(key, nets, leds=false) {
     super('switch', `K_${key.name}`, 4, nets);
+    this.template = require('./switch.ejs');
     this.key = key;
     this.leds = leds;
   }
