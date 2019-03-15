@@ -5,8 +5,8 @@ class Rectangular extends Component {
     super(type, name);
     this.x = 0;
     this.y = 0;
-    this.x1 = (kb.width * 1905)/100;
-    this.y1 = (kb.height * 1905)/100;
+    this.x1 = (kb.bounds.max.x * 1905)/100;
+    this.y1 = (kb.bounds.max.y * 1905)/100;
   }
 
   getAdditionalData() {

@@ -4374,5 +4374,43 @@
       (net 311 "Net-(D_OPT1-Pad2)"))
   )
 
+  (gr_line (start -4 -4) (end 294.5125 -4) (layer Edge.Cuts) (width 0.2))
+  (gr_line (start 294.5125 -4) (end 294.5125 80.2) (layer Edge.Cuts) (width 0.2))
+  (gr_line (start 294.5125 80.2) (end -4 80.2) (layer Edge.Cuts) (width 0.2))
+  (gr_line (start -4 80.2) (end -4 -4) (layer Edge.Cuts) (width 0.2))
+  (gr_arc (start -4 -4) (end -4 -4) (angle -90) (layer Edge.Cuts) (width 0.2))
+  (gr_arc (start 294.5125 -4) (end 294.5125 -4) (angle 90) (layer Edge.Cuts) (width 0.2))
+  (gr_arc (start 294.5125 80.2) (end 294.5125 80.2) (angle -90) (layer Edge.Cuts) (width 0.2))
+  (gr_arc (start -4 80.2) (end -4 80.2) (angle 90) (layer Edge.Cuts) (width 0.2))
+  (zone (net 0) (net_name GND) (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.508))
+    (min_thickness 0.254)
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy -5 -5) (xy -5 81.2) (xy 295.5125 81.2) (xy 295.5125 -5)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy -4 -4) (xy -4 80.2) (xy 294.5125 80.2) (xy 294.5125 -4)
+      )
+    )
+  )
+  (zone (net 0) (net_name VCC) (layer B.Cu) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.508))
+    (min_thickness 0.254)
+    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy -5 -5) (xy -5 81.2) (xy 295.5125 81.2) (xy 295.5125 -5)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy -4 -4) (xy -4 80.2) (xy 294.5125 80.2) (xy 294.5125 -4)
+      )
+    )
+  )
 
 )

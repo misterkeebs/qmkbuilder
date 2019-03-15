@@ -21,7 +21,6 @@ class Component {
     this.nets = nets;
     this.initX = Component.options.initX;
     this.initY = Component.options.initY;
-    console.log('this.name', this.name);
 
     for (let index = 0; index < pads; index++) {
       this.addPad();

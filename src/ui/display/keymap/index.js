@@ -9,6 +9,8 @@ class Keymap extends React.Component {
 		const keyboard = state.keyboard;
 		const flipped = state.ui.get('display-flip', false);
 
+    console.log('keyboard', keyboard);
+
 		const keySize = state.ui.get('keySize', C.KEY_SIZE);
 
 		const layer = state.ui.get('keymap-layer', 0);
