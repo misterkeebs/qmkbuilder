@@ -14,10 +14,12 @@ if (!exists) {
 
 class Component {
   constructor(type, compName, pads, nets, prefix) {
+    const nid = this.getNext();
+    const encType = type.split('').reduce((acc, v, i) => acc + type.charCodeAt(i), 0).toString(16);
     this.type = type;
-    this.name = compName || `${prefix || type.charAt(0).toUpperCase()}${this.getNext()}`;
+    this.name = compName || `${prefix || type.charAt(0).toUpperCase()}${nid}`;
     this.pads = [];
-    // this.id = _genId();
+    this.tstamp = `${encType}${nid.toString(16)}`.toUpperCase();
     this.nets = nets;
     this.initX = Component.options.initX;
     this.initY = Component.options.initY;
@@ -70,10 +72,10 @@ class Component {
   }
 
   render(x, y, rotation) {
-    const { id, name } = this;
+    const { id, tstamp, name } = this;
     const netForPad = this.netForPad.bind(this);
     const additionalData = this.getAdditionalData(x, y, rotation);
-    const data = Object.assign({ id, name, x, y, rotation, netForPad }, additionalData);
+    const data = Object.assign({ id, tstamp, name, x, y, rotation, netForPad }, additionalData);
     data.x = data.x + Component.options.initX;
     data.y = data.y + Component.options.initY;
 

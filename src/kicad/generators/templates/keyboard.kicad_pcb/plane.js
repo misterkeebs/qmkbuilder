@@ -7,7 +7,6 @@ class Plane extends Rectangular {
   }
 
   getAdditionalData() {
-    console.log('x', Object.assign(super.getAdditionalData(), { layer: this.layer }));
     return Object.assign(super.getAdditionalData(), { layer: this.layer });
   }
 }

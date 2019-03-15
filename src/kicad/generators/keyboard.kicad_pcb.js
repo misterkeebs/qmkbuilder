@@ -4,6 +4,8 @@ const Switch = require('./templates/keyboard.kicad_pcb/switch');
 const Diode = require('./templates/keyboard.kicad_pcb/diode');
 const Frame = require('./templates/keyboard.kicad_pcb/frame');
 const Plane = require('./templates/keyboard.kicad_pcb/plane');
+const Crystal = require('./templates/keyboard.kicad_pcb/crystal');
+const Cap = require('./templates/keyboard.kicad_pcb/cap');
 
 const formatName = require('./name');
 
@@ -48,6 +50,27 @@ class PCBGenerator extends Generator {
     modules.push(new Frame(keyboard).render(gap));
     modules.push(new Plane(keyboard, 'GND', 'F.Cu').render(gap + 1));
     modules.push(new Plane(keyboard, 'VCC', 'B.Cu').render(gap + 1));
+
+    const limitx = (keyboard.bounds.max.x * 1905) / 100;
+
+    const xCap1 = new Cap(nets);
+    const xc1x = limitx + 5;
+    const xc1y = 20;
+
+    const xCap2 = new Cap(nets);
+    const xc2x = limitx + 15;
+    const xc2y = 20;
+
+    const crystal = new Crystal(nets);
+    const xx = limitx + 10;
+    const xy = 20;
+
+    crystal.connectPads(1, xCap1, 1);
+    crystal.connectPads(1, xCap2, 2);
+
+    modules.push(xCap1.render(xc1x, xc1y));
+    modules.push(xCap2.render(xc2x, xc2y));
+    modules.push(crystal.render(xx, xy));
 
 		return {
       'nets':        nets.array.map(n => `  ${nets.format(n)}`).join('\n'),

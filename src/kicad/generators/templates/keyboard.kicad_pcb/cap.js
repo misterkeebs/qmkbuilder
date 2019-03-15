@@ -1,8 +1,8 @@
 const Component = require('./component');
 
 class Cap extends Component {
-  constructor(k) {
-    super('cap', null, 2);
+  constructor(nets) {
+    super('cap', null, 2, nets);
   }
 }
 
