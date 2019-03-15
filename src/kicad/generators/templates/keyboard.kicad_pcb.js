@@ -88,15 +88,19 @@ module.exports = `(kicad_pcb (version 20171130) (host pcbnew "(5.0.0-3-g5ebb6b6)
       (scaleselection 1)
       (outputdirectory ""))
   )
-  %nets%
-  (net_class Default "This is the default net class."
-    (clearance 0.2)
-    (trace_width 0.25)
-    (via_dia 0.8)
-    (via_drill 0.4)
-    (uvia_dia 0.3)
-    (uvia_drill 0.1)
-  %net_classes%
+
+%nets%
+
+(net_class Default "This is the default net class."
+  (clearance 0.2)
+  (trace_width 0.25)
+  (via_dia 0.8)
+  (via_drill 0.4)
+  (uvia_dia 0.3)
+  (uvia_drill 0.1)
+%net_classes%
+)
+
   %modules%
 )
 `;
