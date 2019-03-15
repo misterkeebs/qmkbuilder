@@ -1,8 +1,8 @@
 const Component = require('./component');
 
 class Reset extends Component {
-  constructor(k) {
-    super('reset', null, 2);
+  constructor(nets) {
+    super('reset', null, 2, nets);
   }
 }
 

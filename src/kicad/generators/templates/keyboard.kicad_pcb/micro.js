@@ -1,8 +1,8 @@
 const Component = require('./component');
 
 class Micro extends Component {
-  constructor(k) {
-    super('micro', null, 44, 'U');
+  constructor(nets) {
+    super('micro', null, 44, nets, 'U');
   }
 }
 

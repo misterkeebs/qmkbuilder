@@ -14,9 +14,9 @@ if (!exists) {
 
 class Component {
   constructor(type, compName, pads, nets, prefix) {
+    this.type = type;
     const nid = this.getNext();
     const encType = type.split('').reduce((acc, v, i) => acc + type.charCodeAt(i), 0).toString(16);
-    this.type = type;
     this.name = compName || `${prefix || type.charAt(0).toUpperCase()}${nid}`;
     this.pads = [];
     this.tstamp = `${encType}${nid.toString(16)}`.toUpperCase();

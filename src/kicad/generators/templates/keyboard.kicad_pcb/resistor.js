@@ -1,8 +1,8 @@
 const Component = require('./component');
 
 class Resistor extends Component {
-  constructor(resistence) {
-    super('resistor', null, 2);
+  constructor(resistence, nets) {
+    super('resistor', null, 2, nets);
     this.res = resistence;
   }
 
