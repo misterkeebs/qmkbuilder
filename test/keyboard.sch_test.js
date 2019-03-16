@@ -9,6 +9,7 @@ describe('SchematicsGenerator', () => {
     const json = require('./fixtures/no_first');
 
     const kb = Keyboard.deserialize(state, json.keyboard);
+    console.log('kb.pins', kb.pins);
     const gen = new SchematicsGenerator(kb);
     const res = gen.generate();
     require('fs').writeFileSync('output/new.sch', res);

@@ -124,11 +124,6 @@ class PCBGenerator extends Generator {
     micro.connectPads(17, xCap2, 1);
     micro.connectPads(33, r2, 1);
 
-    // const padMatrixOrder = [
-    //   [18, 19, 20, 21, 25, 22, 26],                                // rows
-    //   [41, 40, 39, 38, 37, 8, 9, 10, 11, 28, 29, 30, 12, 31, 32],  // columns
-    // ];
-
     [...Array(keyboard.rows)].forEach((_, r) => {
       const pad = pinPadMap[keyboard.pins.row[r]];
       micro.setPad(pad, `/row${r}`);

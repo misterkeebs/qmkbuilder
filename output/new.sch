@@ -13,6 +13,57 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L keyboard_parts:ATMEGA32U4 U1
+U 1 1 21A1
+P 8550 8000
+F 0 "U1" H 8575 9337 60  0000 C CNN
+F 1 "ATMEGA32U4" H 8575 9231 60  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 8550 8000 60  0001 C CNN
+F 3 "" H 8550 8000 60  0000 C CNN
+	1    8550 8000
+	1    0    0    -1
+$EndComp
+Text GLabel 7500 7650 0    50   Input ~ 0
+row0
+Text GLabel 7500 7750 0    50   Input ~ 0
+row1
+Text GLabel 7500 7850 0    50   Input ~ 0
+row2
+Text GLabel 7500 7950 0    50   Input ~ 0
+row3
+Text GLabel 9650 8550 2    50   Input ~ 0
+col0
+Text GLabel 9650 8450 2    50   Input ~ 0
+col1
+Text GLabel 9650 8350 2    50   Input ~ 0
+col2
+Text GLabel 7500 8050 0    50   Input ~ 0
+col3
+Text GLabel 9650 7250 2    50   Input ~ 0
+col4
+Text GLabel 9650 7350 2    50   Input ~ 0
+col5
+Text GLabel 9650 7450 2    50   Input ~ 0
+col6
+Text GLabel 9650 7550 2    50   Input ~ 0
+col7
+Text GLabel 9650 8250 2    50   Input ~ 0
+col8
+Text GLabel 9650 8150 2    50   Input ~ 0
+col9
+Text GLabel 7500 8650 0    50   Input ~ 0
+col10
+Text GLabel 7500 8750 0    50   Input ~ 0
+col11
+Text GLabel 7500 8850 0    50   Input ~ 0
+col12
+Text GLabel 7500 8950 0    50   Input ~ 0
+col13
+Text GLabel 9650 8850 2    50   Input ~ 0
+col14
+NoConn ~ 7500 6950
+NoConn ~ 7500 7550
 
 Text GLabel 900 1400 0    50   Input ~ 0
 row0

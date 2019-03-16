@@ -6,8 +6,9 @@
 	"scripts": {
 		"build": "cross-env NODE_PATH=./src node index.js",
 		"deploy": "cross-env NODE_PATH=./src NODE_ENV=production node deploy.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
+		"test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "./node_modules/.bin/mocha -w --extension js,ejs"
+ 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/ruiqimao/qmkbuilder.git"
