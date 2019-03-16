@@ -53,8 +53,8 @@ class PCBGenerator extends Generator {
     }
 
     modules.push(new Frame(keyboard).render(gap));
-    modules.push(new Plane(keyboard, 'GND', 'F.Cu').render(gap + 1));
-    modules.push(new Plane(keyboard, 'VCC', 'B.Cu').render(gap + 1));
+    modules.push(new Plane(keyboard, 'VCC', 'F.Cu').render(gap + 1));
+    modules.push(new Plane(keyboard, 'GND', 'B.Cu').render(gap + 1));
 
     const limitx = (keyboard.bounds.max.x * 1905) / 100 + 5;
 
