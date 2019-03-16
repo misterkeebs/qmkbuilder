@@ -62,8 +62,40 @@ Text GLabel 7500 8950 0    50   Input ~ 0
 col13
 Text GLabel 9650 8850 2    50   Input ~ 0
 col14
+$Comp
+L keyboard_parts:USB_mini_micro_B J1
+U 1 1 14A1
+P 6550 7200
+F 0 "J1" H 6432 7491 60  0000 C CNN
+F 1 "USB_mini_micro_B" H 6400 7400 60  0001 C CNN
+F 2 "keyboard_parts:USB_miniB_hirose_5S8" H 6500 7200 60  0001 C CNN
+F 3 "" H 6500 7200 60  0000 C CNN
+	1    6550 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 37B1
+P 7200 7150
+F 0 "R3" V 7200 7100 50  0000 C CNN
+F 1 "22" V 7200 7200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7130 7150 50  0001 C CNN
+F 3 "~" H 7200 7150 50  0001 C CNN
+	1    7200 7150
+	0    1    1    0
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 37B1
+P 7200 7250
+F 0 "R3" V 7200 7200 50  0000 C CNN
+F 1 "22" V 7200 7300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7130 7250 50  0001 C CNN
+F 3 "~" H 7200 7250 50  0001 C CNN
+	1    7200 7250
+	0    1    1    0
+$EndComp
 NoConn ~ 7500 6950
-NoConn ~ 7500 7550
 
 Text GLabel 900 1400 0    50   Input ~ 0
 row0

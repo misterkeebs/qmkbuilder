@@ -101,24 +101,16 @@ class SchematicsGenerator extends Generator {
 	fillTemplate() {
     const components = [];
 
-		const microTpl = require('./templates/keyboard.sch/micro');
+    const x = 8550;
+    const y = 8000;
 
-    const tstamp = genTstamp('micro', 1);
-    const data = { x: 8550, y: 8000, tstamp, name: 'U1' };
-    components.push(ejs.render(microTpl, { data }));
-
-    [...Array(this.keyboard.rows)].forEach((_, r) => {
-      const pad = pinPadMap[this.keyboard.pins.row[r]];
-      components.push(this.addPadLabel(pad, `row${r}`))
-    });
-
-    [...Array(this.keyboard.cols)].forEach((_, c) => {
-      const pad = pinPadMap[this.keyboard.pins.col[c]];
-      components.push(this.addPadLabel(pad, `col${c}`))
-    });
+    this.addMicro(x, y, components);
+    this.addPadLabels(components);
+		this.addUSB(x, y, components);
+		this.addResistor(x, y, 'R3', components);
+		this.addResistor(x, y + 100, 'R4', components);
 
     components.push(this.addNoConnect(1));
-    components.push(this.addNoConnect(7));
 
     this.renderMatrix(components);
 
@@ -127,6 +119,37 @@ class SchematicsGenerator extends Generator {
 		};
 	}
 
+  addMicro(x, y, components) {
+		const microTpl = require('./templates/keyboard.sch/micro');
+    const tstamp = genTstamp('micro', 1);
+    const data = { x, y, tstamp, name: 'U1' };
+    components.push(ejs.render(microTpl, { data }));
+  }
+
+  addUSB(_x, _y, components) {
+    const usbTpl = require('./templates/keyboard.sch/usb');
+    const tstamp = genTstamp('usb', 1);
+    const data = { x: _x - 2000, y: _y - 800, tstamp, name: 'J1' };
+    components.push(ejs.render(usbTpl, { data }));
+  }
+
+  addResistor(_x, _y, name, components) {
+    const resistorTpl = require('./templates/keyboard.sch/resistor');
+    const tstamp = genTstamp('resistor', 1);
+    const data = { x: _x - 1350, y: _y - 850, tstamp, name: 'R1' };
+    components.push(ejs.render(resistorTpl, { data }));
+  }
+
+  addPadLabels(components) {
+    [...Array(this.keyboard.rows)].forEach((_, r) => {
+      const pad = pinPadMap[this.keyboard.pins.row[r]];
+      components.push(this.addPadLabel(pad, `row${r}`));
+    });
+    [...Array(this.keyboard.cols)].forEach((_, c) => {
+      const pad = pinPadMap[this.keyboard.pins.col[c]];
+      components.push(this.addPadLabel(pad, `col${c}`));
+    });
+  }
 }
 
 module.exports = SchematicsGenerator;
