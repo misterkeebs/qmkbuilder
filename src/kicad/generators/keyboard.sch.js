@@ -101,6 +101,7 @@ class SchematicsGenerator extends Generator {
 	fillTemplate() {
     const components = [];
 
+    // 8550 3300
     const x = 8550;
     const y = 8000;
 
@@ -109,6 +110,9 @@ class SchematicsGenerator extends Generator {
 		this.addUSB(x, y, components);
 		this.addResistor(x, y, 'R3', components);
 		this.addResistor(x, y + 100, 'R4', components);
+    this.addCap(x, y, 'C8', components);
+    this.addVCC(x, y, 'PWR0101', components);
+
 
     components.push(this.addNoConnect(1));
 
@@ -118,6 +122,20 @@ class SchematicsGenerator extends Generator {
 			'components': components.join(''),
 		};
 	}
+
+  addVCC(x, y, name, components) {
+    const vccTpl = require('./templates/keyboard.sch/vcc');
+    const tstamp = genTstamp('vcc', 1);
+    const data = { x: x - 1700, y: y - 1150, tstamp, name };
+    components.push(ejs.render(vccTpl, { data }));
+  }
+
+  addCap(x, y, name, components) {
+    const capTpl = require('./templates/keyboard.sch/cap');
+    const tstamp = genTstamp('cap', 1);
+    const data = { x: x - 1250, y: y - 550, tstamp, name };
+    components.push(ejs.render(capTpl, { data }));
+  }
 
   addMicro(x, y, components) {
 		const microTpl = require('./templates/keyboard.sch/micro');
@@ -136,7 +154,7 @@ class SchematicsGenerator extends Generator {
   addResistor(_x, _y, name, components) {
     const resistorTpl = require('./templates/keyboard.sch/resistor');
     const tstamp = genTstamp('resistor', 1);
-    const data = { x: _x - 1350, y: _y - 850, tstamp, name: 'R1' };
+    const data = { x: _x - 1350, y: _y - 850, tstamp, name };
     components.push(ejs.render(resistorTpl, { data }));
   }
 
