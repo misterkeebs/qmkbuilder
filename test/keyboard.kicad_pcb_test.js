@@ -6,7 +6,7 @@ const Keyboard = require('../src/state/keyboard');
 describe('PCBGenerator', () => {
   it('does something', () => {
     const state = { update: () => {} };
-    const json = require('./fixtures/no_first');
+    const json = require('./fixtures/tmo50');
 
     const kb = Keyboard.deserialize(state, json.keyboard);
     const gen = new PCBGenerator(kb);
