@@ -23,7 +23,7 @@ class PCBGenerator extends Generator {
     const nets = new Nets();
 		const nameSet = new Set();
     const modules = [];
-    const gap = 4;
+    const gap = 5;
 
     [...Array(keyboard.cols+1)].forEach((_, i) => nets.add(`/col${i}`));
     [...Array(keyboard.rows+1)].forEach((_, i) => nets.add(`/row${i}`));
