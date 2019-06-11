@@ -96,11 +96,11 @@ class PCBGenerator extends Generator {
     const r2x = limitx + 25;
     const r2y = 8;
 
-    const r3 = new Resistor('22u', nets);
+    const r3 = new Resistor('22', nets);
     const r3x = limitx + 5;
     const r3y = 8;
 
-    const r4 = new Resistor('22u', nets);
+    const r4 = new Resistor('22', nets);
     const r4x = limitx + 5;
     const r4y = 12;
 
