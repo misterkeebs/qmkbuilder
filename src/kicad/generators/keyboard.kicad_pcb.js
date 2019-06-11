@@ -10,6 +10,7 @@ const Resistor = require('./templates/keyboard.kicad_pcb/resistor');
 const Reset = require('./templates/keyboard.kicad_pcb/reset');
 const Micro = require('./templates/keyboard.kicad_pcb/Micro');
 const USB = require('./templates/keyboard.kicad_pcb/usb');
+const Text = require('./templates/keyboard.kicad_pcb/text');
 
 const formatName = require('./name');
 const pinPadMap = require('./pin-pad-map');
@@ -60,6 +61,7 @@ class PCBGenerator extends Generator {
     modules.push(new Plane(keyboard, 'GND', 'B.Cu').render(gap + 1));
 
     const limitx = (keyboard.bounds.max.x * 1905) / 100 + 5;
+    const limity = (keyboard.bounds.max.y * 1905) / 100;
 
     const xCap1 = new Cap(nets);
     const xc1x = limitx + 5;
@@ -153,6 +155,14 @@ class PCBGenerator extends Generator {
       dCap.setPad(1, 'VCC');
       modules.push(dCap.render(limitx + 5 + (i*5), 30));
     });
+
+    // const tx = 1-gap;
+    const sx = 1;
+    const sy = 1;
+    const tx = limitx - 1 + (1.5 - sx);
+    const ty = limity + 2 + (2.5 - sy);
+    const text = new Text('PCB Builder by MisterKeebs - mrkeebs.com', sx, sy);
+    modules.push(text.render(tx, ty));
 
 		return {
       'nets':        nets.array.map(n => `  ${nets.format(n)}`).join('\n'),
