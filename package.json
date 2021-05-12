@@ -29,7 +29,7 @@
 		"chai": "4.2.0",
 		"classnames": "^2.2.5",
 		"co": "^4.6.0",
-		"codemirror": "^5.22.0",
+		"codemirror": "^5.58.2",
 		"crypto": "0.0.3",
 		"ejs": "^2.6.1",
 		"errorify": "^0.3.1",
